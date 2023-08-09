@@ -13,7 +13,7 @@ Declare a toggle.
 @State private var showingImagePicker = false
 ```
 
-Toggle your toggle to initiate a picker a trailing closure of a sheet.
+Toggle your toggle to initiate a picker in a trailing closure of a sheet.
 ```swift
 .sheet(isPresented: $showingImagePicker) {
     ImagePicker(image: $inputImage)
