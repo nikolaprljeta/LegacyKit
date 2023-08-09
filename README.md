@@ -7,7 +7,13 @@ To install this package, import `https://github.com/nikolaprljeta/LegacyKit` int
 ## Usage example
 
 ### Importing Images
-To import an image, create a state private var showingImagePicker bool to toggle, then initiate the picker inside the trailing closure of a sheet.
+
+Declare a toggle.
+```swift
+@State private var showingImagePicker = false
+```
+
+Toggle your toggle to initiate a picker a trailing closure of a sheet.
 ```swift
 .sheet(isPresented: $showingImagePicker) {
     ImagePicker(image: $inputImage)
@@ -15,7 +21,7 @@ To import an image, create a state private var showingImagePicker bool to toggle
 ```
 
 ### Saving Images
-Call the save() function from e.g. a button.
+Write out a save function like so.
 ```swift
 func save() {
     guard let image = image else { return }
@@ -34,8 +40,18 @@ func save() {
 }
 ```
 
+Then call it from e.g. a button.
+```swift
+
+```
+
 ### Scanning QR Codes
-To scan a code, first off write out the handleScan() function like so:
+First off declare a toggle.
+```swift
+@State private var isShowingScanner = false
+```
+
+To scan a code, write out the handleScan() function like so:
 ```swift
 func handleScan(result: Result<ScanResult, ScanError>) {
     isShowingScanner = false
@@ -55,7 +71,7 @@ func handleScan(result: Result<ScanResult, ScanError>) {
 }
 ```
 
-Then toggle a state bool (i.e. isShowingScanner) to show/hide the sheet cotaining the scanner.
+Then toggle your toggle by e.g. a button tap to show the scanner sheet.
 ```swift
 .toolbar {
     Button {
