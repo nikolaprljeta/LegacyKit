@@ -6,7 +6,13 @@ To install this package, import `https://github.com/nikolaprljeta/LegacyKit` int
 
 ## Usage example
 
-### Importing Images
+### First Things First
+Import LegacyKit in the relevant file
+```swift
+import LegacyKit
+```
+
+### Loading Images
 
 Declare a toggle i.e.
 ```swift
@@ -52,4 +58,4 @@ Heard you like dependencies, so I put a dependency in your dependency. [Take it 
 CodeScanner was made by [Paul Hudson](https://twitter.com/twostraws?s=21&t=ncXijBxwxCEB_4qcaiQoLA), who writes amazing Swift. It’s available under the MIT license, which permits commercial use, modification, distribution, and private use.
 
 ## License
-[MIT License](https://choosealicense.com/licenses/mit/)
+[MIT](https://choosealicense.com/licenses/mit/)
