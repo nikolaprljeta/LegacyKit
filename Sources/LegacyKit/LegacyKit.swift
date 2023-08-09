@@ -1,6 +1,7 @@
 import UIKit
 import PhotosUI
 import SwiftUI
+//import CodeScanner
 
 public struct LegacyKit {
     public private(set) var text = "Hello, World!"
