@@ -2,12 +2,10 @@
 
 ## Installation
 
-To install this package, import `url` into SPM.
+To install this package, import `https://github.com/nikolaprljeta/LegacyKit` into SPM.
 
 ## Usage example
 
 ```swift
 ImagePicker(image: $inputImage)
 ```
-
-## 
