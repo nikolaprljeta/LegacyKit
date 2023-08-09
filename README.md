@@ -35,7 +35,7 @@ func save() {
 ```
 
 ### Scanning QR Codes
-To scan a code, first off write out the handlescan function like so:
+To scan a code, first off write out the handleScan() function like so:
 ```swift
 func handleScan(result: Result<ScanResult, ScanError>) {
     isShowingScanner = false
