@@ -8,12 +8,12 @@ To install this package, import `https://github.com/nikolaprljeta/LegacyKit` int
 
 ### Importing Images
 
-Declare a toggle.
+Declare a toggle i.e.
 ```swift
 @State private var showingImagePicker = false
 ```
 
-Toggle your toggle to initiate a picker in a trailing closure of a sheet.
+Toggle your toggle to initiate a picker in the trailing closure of a sheet.
 ```swift
 .sheet(isPresented: $showingImagePicker) {
     ImagePicker(image: $inputImage)
