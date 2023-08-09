@@ -48,8 +48,8 @@ Button("Save", action: save)
 ### Scanning QR Codes
 Heard you like dependencies, so I put a dependency in your dependency. [Take it away](https://github.com/twostraws/CodeScanner), [Hudson](https://twitter.com/twostraws?s=21&t=ncXijBxwxCEB_4qcaiQoLA). 
 
-##Credits
+## Credits
 CodeScanner was made by [Paul Hudson](https://twitter.com/twostraws?s=21&t=ncXijBxwxCEB_4qcaiQoLA), who writes amazing Swift. It’s available under the MIT license, which permits commercial use, modification, distribution, and private use.
 
-##License
+## License
 [MIT License](https://choosealicense.com/licenses/mit/)
