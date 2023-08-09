@@ -42,45 +42,14 @@ func save() {
 
 Then call it from e.g. a button.
 ```swift
-
+Button("Save", action: save)
 ```
 
 ### Scanning QR Codes
-First off declare a toggle.
-```swift
-@State private var isShowingScanner = false
-```
+Heard you like dependencies, so I put a dependency in your dependency. [Take it away](https://github.com/twostraws/CodeScanner), [Hudson](https://twitter.com/twostraws?s=21&t=ncXijBxwxCEB_4qcaiQoLA). 
 
-To scan a code, write out the handleScan() function like so:
-```swift
-func handleScan(result: Result<ScanResult, ScanError>) {
-    isShowingScanner = false
-        
-    switch result {
-    case .success(let result):
-        let details = result.string.components(separatedBy: "\n")
-        guard details.count == 2 else { return }
-            
-        let person = People()
-        person.name = details[0]
-        person.eMailAddress = details[1]
-        people.add(person)
-    case .failure(let error):
-        print("Scanning failed: \(error.localizedDescription)")
-    }
-}
-```
+##Credits
+CodeScanner was made by [Paul Hudson](https://twitter.com/twostraws?s=21&t=ncXijBxwxCEB_4qcaiQoLA), who writes amazing Swift. It’s available under the MIT license, which permits commercial use, modification, distribution, and private use.
 
-Then toggle your toggle by e.g. a button tap to show the scanner sheet.
-```swift
-.toolbar {
-    Button {
-        isShowingScanner = true
-    } label: {
-        Label("Scan", systemImage: "qrcode.viewfinder")
-    }
-}
-.sheet(isPresented: $isShowingScanner) {
-    CodeScannerView(codeTypes: [.qr], simulatedData: "John Smith\njohnsmith@example.com", completion: handleScan)
-}
-```
+##License
+[MIT License](https://choosealicense.com/licenses/mit/)
